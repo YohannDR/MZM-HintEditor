@@ -28,3 +28,4 @@ Once you are done you can click the "Save" button.
 ## Notes
 - All numbers on the editor are in decimal, you may need to convert numbers if you are using MAGE
 - Changes will be discarded if you change which statue you are editing
+- Chozodia, Crateria, Ridley and Tourian are broken, i'm working on a fix
