@@ -30,7 +30,7 @@ namespace ChozoStatueHintEditor
         private void InitializeComponent()
         {
             this.BtnOpenROM = new System.Windows.Forms.Button();
-            this.GbMain = new System.Windows.Forms.GroupBox();
+            this.GbHint = new System.Windows.Forms.GroupBox();
             this.GbEnd = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -56,14 +56,38 @@ namespace ChozoStatueHintEditor
             this.label1 = new System.Windows.Forms.Label();
             this.CbStatues = new System.Windows.Forms.ComboBox();
             this.BtnSave = new System.Windows.Forms.Button();
-            this.GbMain.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.TSMIHint = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMIPair = new System.Windows.Forms.ToolStripMenuItem();
+            this.GbPair = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TbMapY2 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.TbMapX2 = new System.Windows.Forms.TextBox();
+            this.TbRoomID2 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.CbAreaID2 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TbMapY1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.TbMapX1 = new System.Windows.Forms.TextBox();
+            this.TbRoomID1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CbPairID = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CbAreaID1 = new System.Windows.Forms.ComboBox();
+            this.GbHint.SuspendLayout();
             this.GbEnd.SuspendLayout();
             this.GbStart.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.GbPair.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnOpenROM
             // 
-            this.BtnOpenROM.Location = new System.Drawing.Point(12, 12);
+            this.BtnOpenROM.Location = new System.Drawing.Point(12, 46);
             this.BtnOpenROM.Name = "BtnOpenROM";
             this.BtnOpenROM.Size = new System.Drawing.Size(90, 31);
             this.BtnOpenROM.TabIndex = 0;
@@ -71,19 +95,19 @@ namespace ChozoStatueHintEditor
             this.BtnOpenROM.UseVisualStyleBackColor = true;
             this.BtnOpenROM.Click += new System.EventHandler(this.BtnOpenROM_Click);
             // 
-            // GbMain
+            // GbHint
             // 
-            this.GbMain.Controls.Add(this.GbEnd);
-            this.GbMain.Controls.Add(this.GbStart);
-            this.GbMain.Controls.Add(this.label1);
-            this.GbMain.Controls.Add(this.CbStatues);
-            this.GbMain.Location = new System.Drawing.Point(12, 65);
-            this.GbMain.Name = "GbMain";
-            this.GbMain.Size = new System.Drawing.Size(458, 439);
-            this.GbMain.TabIndex = 1;
-            this.GbMain.TabStop = false;
-            this.GbMain.Text = "Editor";
-            this.GbMain.Visible = false;
+            this.GbHint.Controls.Add(this.GbEnd);
+            this.GbHint.Controls.Add(this.GbStart);
+            this.GbHint.Controls.Add(this.label1);
+            this.GbHint.Controls.Add(this.CbStatues);
+            this.GbHint.Location = new System.Drawing.Point(12, 105);
+            this.GbHint.Name = "GbHint";
+            this.GbHint.Size = new System.Drawing.Size(458, 443);
+            this.GbHint.TabIndex = 1;
+            this.GbHint.TabStop = false;
+            this.GbHint.Text = "Hint";
+            this.GbHint.Visible = false;
             // 
             // GbEnd
             // 
@@ -95,7 +119,7 @@ namespace ChozoStatueHintEditor
             this.GbEnd.Controls.Add(this.label8);
             this.GbEnd.Controls.Add(this.label9);
             this.GbEnd.Controls.Add(this.CbTargetArea);
-            this.GbEnd.Location = new System.Drawing.Point(19, 274);
+            this.GbEnd.Location = new System.Drawing.Point(19, 273);
             this.GbEnd.Name = "GbEnd";
             this.GbEnd.Size = new System.Drawing.Size(418, 149);
             this.GbEnd.TabIndex = 4;
@@ -206,7 +230,7 @@ namespace ChozoStatueHintEditor
             this.GbStart.Controls.Add(this.TbXStart);
             this.GbStart.Controls.Add(this.label2);
             this.GbStart.Controls.Add(this.CbStartArea);
-            this.GbStart.Location = new System.Drawing.Point(19, 83);
+            this.GbStart.Location = new System.Drawing.Point(19, 82);
             this.GbStart.Name = "GbStart";
             this.GbStart.Size = new System.Drawing.Size(418, 166);
             this.GbStart.TabIndex = 3;
@@ -343,7 +367,7 @@ namespace ChozoStatueHintEditor
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(64, 35);
+            this.label1.Location = new System.Drawing.Point(64, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 1;
@@ -364,7 +388,7 @@ namespace ChozoStatueHintEditor
             "Screw (Unused)",
             "Kraid Flame (Unused)",
             "Ridley Flame (Unused)"});
-            this.CbStatues.Location = new System.Drawing.Point(128, 34);
+            this.CbStatues.Location = new System.Drawing.Point(128, 33);
             this.CbStatues.Name = "CbStatues";
             this.CbStatues.Size = new System.Drawing.Size(183, 23);
             this.CbStatues.TabIndex = 0;
@@ -373,7 +397,7 @@ namespace ChozoStatueHintEditor
             // BtnSave
             // 
             this.BtnSave.Enabled = false;
-            this.BtnSave.Location = new System.Drawing.Point(389, 12);
+            this.BtnSave.Location = new System.Drawing.Point(389, 46);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(81, 31);
             this.BtnSave.TabIndex = 2;
@@ -381,33 +405,288 @@ namespace ChozoStatueHintEditor
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMIHint,
+            this.TSMIPair});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(491, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // TSMIHint
+            // 
+            this.TSMIHint.Enabled = false;
+            this.TSMIHint.Name = "TSMIHint";
+            this.TSMIHint.Size = new System.Drawing.Size(42, 20);
+            this.TSMIHint.Text = "Hint";
+            this.TSMIHint.Click += new System.EventHandler(this.TSMIHint_Click);
+            // 
+            // TSMIPair
+            // 
+            this.TSMIPair.Enabled = false;
+            this.TSMIPair.Name = "TSMIPair";
+            this.TSMIPair.Size = new System.Drawing.Size(39, 20);
+            this.TSMIPair.Text = "Pair";
+            this.TSMIPair.Click += new System.EventHandler(this.TSMIPair_Click);
+            // 
+            // GbPair
+            // 
+            this.GbPair.Controls.Add(this.label17);
+            this.GbPair.Controls.Add(this.TbMapY2);
+            this.GbPair.Controls.Add(this.label18);
+            this.GbPair.Controls.Add(this.label19);
+            this.GbPair.Controls.Add(this.TbMapX2);
+            this.GbPair.Controls.Add(this.TbRoomID2);
+            this.GbPair.Controls.Add(this.label20);
+            this.GbPair.Controls.Add(this.CbAreaID2);
+            this.GbPair.Controls.Add(this.label16);
+            this.GbPair.Controls.Add(this.TbMapY1);
+            this.GbPair.Controls.Add(this.label15);
+            this.GbPair.Controls.Add(this.label14);
+            this.GbPair.Controls.Add(this.TbMapX1);
+            this.GbPair.Controls.Add(this.TbRoomID1);
+            this.GbPair.Controls.Add(this.label13);
+            this.GbPair.Controls.Add(this.CbPairID);
+            this.GbPair.Controls.Add(this.label12);
+            this.GbPair.Controls.Add(this.CbAreaID1);
+            this.GbPair.Location = new System.Drawing.Point(12, 105);
+            this.GbPair.Name = "GbPair";
+            this.GbPair.Size = new System.Drawing.Size(389, 290);
+            this.GbPair.TabIndex = 4;
+            this.GbPair.TabStop = false;
+            this.GbPair.Text = "Pair";
+            this.GbPair.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(213, 241);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 20);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "Map Y 2 :";
+            // 
+            // TbMapY2
+            // 
+            this.TbMapY2.Location = new System.Drawing.Point(317, 241);
+            this.TbMapY2.Name = "TbMapY2";
+            this.TbMapY2.Size = new System.Drawing.Size(41, 23);
+            this.TbMapY2.TabIndex = 24;
+            this.TbMapY2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(213, 203);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(71, 20);
+            this.label18.TabIndex = 23;
+            this.label18.Text = "Map X 2 :";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(213, 165);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(87, 20);
+            this.label19.TabIndex = 21;
+            this.label19.Text = "Room ID 2 :";
+            // 
+            // TbMapX2
+            // 
+            this.TbMapX2.Location = new System.Drawing.Point(317, 203);
+            this.TbMapX2.Name = "TbMapX2";
+            this.TbMapX2.Size = new System.Drawing.Size(41, 23);
+            this.TbMapX2.TabIndex = 22;
+            this.TbMapX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TbRoomID2
+            // 
+            this.TbRoomID2.Location = new System.Drawing.Point(317, 165);
+            this.TbRoomID2.Name = "TbRoomID2";
+            this.TbRoomID2.Size = new System.Drawing.Size(41, 23);
+            this.TbRoomID2.TabIndex = 20;
+            this.TbRoomID2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(213, 117);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 20);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "Area 2 :";
+            // 
+            // CbAreaID2
+            // 
+            this.CbAreaID2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbAreaID2.FormattingEnabled = true;
+            this.CbAreaID2.Items.AddRange(new object[] {
+            "Brinstar",
+            "Kraid",
+            "Norfair",
+            "Ridley",
+            "Tourian",
+            "Crateria",
+            "Chozodia"});
+            this.CbAreaID2.Location = new System.Drawing.Point(277, 117);
+            this.CbAreaID2.Name = "CbAreaID2";
+            this.CbAreaID2.Size = new System.Drawing.Size(81, 23);
+            this.CbAreaID2.TabIndex = 18;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(27, 239);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 20);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Map Y 1 :";
+            // 
+            // TbMapY1
+            // 
+            this.TbMapY1.Location = new System.Drawing.Point(131, 239);
+            this.TbMapY1.Name = "TbMapY1";
+            this.TbMapY1.Size = new System.Drawing.Size(41, 23);
+            this.TbMapY1.TabIndex = 16;
+            this.TbMapY1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(27, 201);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 20);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Map X 1 :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(27, 163);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 20);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Room ID 1 :";
+            // 
+            // TbMapX1
+            // 
+            this.TbMapX1.Location = new System.Drawing.Point(131, 201);
+            this.TbMapX1.Name = "TbMapX1";
+            this.TbMapX1.Size = new System.Drawing.Size(41, 23);
+            this.TbMapX1.TabIndex = 14;
+            this.TbMapX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TbRoomID1
+            // 
+            this.TbRoomID1.Location = new System.Drawing.Point(131, 163);
+            this.TbRoomID1.Name = "TbRoomID1";
+            this.TbRoomID1.Size = new System.Drawing.Size(41, 23);
+            this.TbRoomID1.TabIndex = 9;
+            this.TbRoomID1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(57, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(31, 20);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "ID :";
+            // 
+            // CbPairID
+            // 
+            this.CbPairID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbPairID.FormattingEnabled = true;
+            this.CbPairID.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.CbPairID.Location = new System.Drawing.Point(94, 35);
+            this.CbPairID.Name = "CbPairID";
+            this.CbPairID.Size = new System.Drawing.Size(183, 23);
+            this.CbPairID.TabIndex = 7;
+            this.CbPairID.SelectedIndexChanged += new System.EventHandler(this.CbPairID_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(27, 115);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 20);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Area 1 :";
+            // 
+            // CbAreaID1
+            // 
+            this.CbAreaID1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbAreaID1.FormattingEnabled = true;
+            this.CbAreaID1.Items.AddRange(new object[] {
+            "Brinstar",
+            "Kraid",
+            "Norfair",
+            "Ridley",
+            "Tourian",
+            "Crateria",
+            "Chozodia"});
+            this.CbAreaID1.Location = new System.Drawing.Point(91, 115);
+            this.CbAreaID1.Name = "CbAreaID1";
+            this.CbAreaID1.Size = new System.Drawing.Size(81, 23);
+            this.CbAreaID1.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 521);
+            this.ClientSize = new System.Drawing.Size(491, 560);
+            this.Controls.Add(this.GbPair);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.GbMain);
+            this.Controls.Add(this.GbHint);
             this.Controls.Add(this.BtnOpenROM);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Chozo Statue Hint Editor";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
-            this.GbMain.ResumeLayout(false);
-            this.GbMain.PerformLayout();
+            this.GbHint.ResumeLayout(false);
+            this.GbHint.PerformLayout();
             this.GbEnd.ResumeLayout(false);
             this.GbEnd.PerformLayout();
             this.GbStart.ResumeLayout(false);
             this.GbStart.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.GbPair.ResumeLayout(false);
+            this.GbPair.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button BtnOpenROM;
-        private System.Windows.Forms.GroupBox GbMain;
+        private System.Windows.Forms.GroupBox GbHint;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.ComboBox CbStatues;
         private System.Windows.Forms.Label label1;
@@ -433,6 +712,28 @@ namespace ChozoStatueHintEditor
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox TbYTarget;
         private System.Windows.Forms.TextBox TbXTarget;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem TSMIHint;
+        private System.Windows.Forms.ToolStripMenuItem TSMIPair;
+        private System.Windows.Forms.GroupBox GbPair;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox CbPairID;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox CbAreaID1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox TbMapY1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox TbMapX1;
+        private System.Windows.Forms.TextBox TbRoomID1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox TbMapY2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox TbMapX2;
+        private System.Windows.Forms.TextBox TbRoomID2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox CbAreaID2;
     }
 }
 
