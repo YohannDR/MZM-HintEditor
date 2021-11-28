@@ -5,7 +5,9 @@
 ## How To Use
 Launch the program, then load your ROM (either will the button or by drag/dropping the file on the window)
 
-![image](https://user-images.githubusercontent.com/81297939/143722468-cdfc16fd-d175-4f46-9566-9842c0b4b410.png)
+### Hint Editor
+
+![image](https://user-images.githubusercontent.com/81297939/143765748-cade6ed5-1dad-451f-ad34-473cb00d0b00.png)
 
 You can select which hint you are ediing with the "Statue" list.
 
@@ -23,9 +25,25 @@ You can then edit where your hint will end by editing the fields in the "target"
 - X Position : X position on the minimap
 - Y Position : Y position on the minimap
 
-Once you are done you can click the "Save" button.
+### Pair Editor
+
+![image](https://user-images.githubusercontent.com/81297939/143765779-5caf972b-26f9-4aaa-8f9b-526bcb15b19e.png)
+
+This allows you to edit the elevator room pairs, they are used by the hints to change the area
+
+You can select which hint you are ediing with the "ID" list.
+
+- Area 1 : The first area of the pair
+- Area 2 : The second area of the pair
+- Room ID 1 : The room ID in which the first elevator is located
+- Room ID 2 : The room ID in which the second elevator is located
+- Map X 1 : The X position on the minimap of the first elevator
+- Map X 2 : The X position on the minimap of the second elevator
+- Map Y 1 : The Y position on the minimap of the first elevator
+- Map Y 2 : The Y position on the minimap of the second elevator
 
 ## Notes
 - All numbers on the editor are in decimal, you may need to convert numbers if you are using MAGE
-- Changes will be discarded if you change which statue you are editing
-- Chozodia, Crateria, Ridley and Tourian are broken, i'm working on a fix
+- Changes will be discarded if you change which hint/pair you are editing (they won't if you switch to the other editor)
+- Clicking on the save button saves the current hint/pair on the current editor
+- Report any bugs to me on Discord (either in MAGConst or by DM'ing me : yohann#2146)
