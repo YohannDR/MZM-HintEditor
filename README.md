@@ -7,7 +7,7 @@
 - Simply run the .exe
 
 ## How To Use
-Launch the program, then load your ROM (either will the button or by drag/dropping the file on the window)
+Launch the program, then load your ROM (either with the button or by drag/dropping the file in the window)
 
 ### Hint Editor
 
