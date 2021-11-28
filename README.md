@@ -2,6 +2,10 @@
 
 ### Editor for the chozo statue hints of Metroid Zero Mission
 
+## Download
+- Download the latest version in the [release](https://github.com/YohannDR/MZM-HintEditor/releases) tab (either the 3 individual files or the zip)
+- Simply run the .exe
+
 ## How To Use
 Launch the program, then load your ROM (either will the button or by drag/dropping the file on the window)
 
